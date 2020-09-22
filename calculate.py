@@ -14,3 +14,10 @@ def month_days(month, leap_year):
         return 30
     elif month == 2 and leap_year:
         return 29
+    elif month == 2 and (not leap_year):
+        return 28
+
+
+name = input("Please enter your name: ")
+age = input("Please enter your age: ")
+localtime = time.localtime(time.time())
