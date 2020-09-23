@@ -30,3 +30,11 @@ begin_year = int(localtime.tm_year) - year
 end_year = begin_year + year
 
 for y in range(begin_year, end_year):
+    if (judge_leap_year(y)):
+        day = day + 366
+    else:
+        day = day + 365
+
+leap_year = judge_leap_year(localtime.tm_year)
+for m in range(1, localtime.tm_mon):
+    day = day + month_days(m, leap_year)
